@@ -241,7 +241,9 @@ function createJournalCard(journal) {
                                 <div class="flex items-start text-gray-600">
                                     <i class="fas fa-building w-4 md:w-5 text-blue-600 mt-0.5 flex-shrink-0"></i>
                                     <span class="font-semibold mr-1 md:mr-2">Penerbit:</span>
-                                    <span class="break-words min-w-0">${journal.Penerbit || "-"}</span>
+                                    <span class="break-words min-w-0">${
+                                      journal.Penerbit || "-"
+                                    }</span>
                                 </div>
                                 <div class="flex items-start text-gray-600">
                                     <i class="fas fa-flask w-4 md:w-5 text-blue-600 mt-0.5 flex-shrink-0"></i>
@@ -260,12 +262,16 @@ function createJournalCard(journal) {
                                 <div class="flex items-start text-gray-600">
                                     <i class="fas fa-barcode w-4 md:w-5 text-blue-600 mt-0.5 flex-shrink-0"></i>
                                     <span class="font-semibold mr-1 md:mr-2">ISSN:</span>
-                                    <span class="break-all">${journal.ISSN || "-"}</span>
+                                    <span class="break-all">${
+                                      journal.ISSN || "-"
+                                    }</span>
                                 </div>
                                 <div class="flex items-start text-gray-600">
                                     <i class="fas fa-digital-tachograph w-4 md:w-5 text-blue-600 mt-0.5 flex-shrink-0"></i>
                                     <span class="font-semibold mr-1 md:mr-2">E-ISSN:</span>
-                                    <span class="break-all">${journal["E ISSN"] || "-"}</span>
+                                    <span class="break-all">${
+                                      journal["E ISSN"] || "-"
+                                    }</span>
                                 </div>
                                 <div class="flex items-start text-gray-600">
                                     <i class="fas fa-calendar-alt w-4 md:w-5 text-blue-600 mt-0.5 flex-shrink-0"></i>
