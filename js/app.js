@@ -208,12 +208,12 @@ function createJournalCard(journal) {
   const sintaBadgeClass = journal.Sinta === "S5" ? "badge-s5" : "badge-s6";
 
   return `
-        <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
             <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                 <div class="flex-1">
                     <div class="flex items-start space-x-4">
-                        <div class="bg-purple-100 rounded-lg p-3 flex-shrink-0">
-                            <i class="fas fa-journal-whills text-purple-600 text-2xl"></i>
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-3 flex-shrink-0 shadow-lg">
+                            <i class="fas fa-journal-whills text-white text-2xl"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-xl font-bold text-gray-800 mb-2">${
@@ -232,53 +232,53 @@ function createJournalCard(journal) {
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-bookmark w-5 text-purple-500"></i>
+                                    <i class="fas fa-bookmark w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">Singkatan:</span>
                                     <span>${
                                       journal["Singkatan Nama Jurnal"] || "-"
                                     }</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-building w-5 text-purple-500"></i>
+                                    <i class="fas fa-building w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">Penerbit:</span>
                                     <span>${journal.Penerbit || "-"}</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-flask w-5 text-purple-500"></i>
+                                    <i class="fas fa-flask w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">Bidang:</span>
                                     <span>${
                                       journal["Bidang Ilmu"] || "-"
                                     }</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-map-marker-alt w-5 text-purple-500"></i>
+                                    <i class="fas fa-map-marker-alt w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">Kota:</span>
                                     <span>${
                                       journal["Kota Terbit"] || "-"
                                     }</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-barcode w-5 text-purple-500"></i>
+                                    <i class="fas fa-barcode w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">ISSN:</span>
                                     <span>${journal.ISSN || "-"}</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-digital-tachograph w-5 text-purple-500"></i>
+                                    <i class="fas fa-digital-tachograph w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">E-ISSN:</span>
                                     <span>${journal["E ISSN"] || "-"}</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-calendar-alt w-5 text-purple-500"></i>
+                                    <i class="fas fa-calendar-alt w-5 text-blue-600"></i>
                                     <span class="font-semibold mr-2">Masa Aktif:</span>
                                     <span>${
                                       journal["Masa aktif Sinta"] || "-"
                                     }</span>
                                 </div>
                                 <div class="flex items-center text-gray-600">
-                                    <i class="fas fa-link w-5 text-purple-500"></i>
+                                    <i class="fas fa-link w-5 text-blue-600"></i>
                                     ${
                                       journal["Link Jurnal"]
-                                        ? `<a href="${journal["Link Jurnal"]}" target="_blank" class="text-purple-600 hover:text-purple-800 font-semibold">
+                                        ? `<a href="${journal["Link Jurnal"]}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors">
                                             Kunjungi Website <i class="fas fa-external-link-alt ml-1 text-xs"></i>
                                         </a>`
                                         : "<span>-</span>"
