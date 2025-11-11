@@ -149,10 +149,8 @@
         display: none;
       }
 
-      @media (max-width: 768px) {
-        .mobile-menu.active {
-          display: block;
-        }
+      .mobile-menu.active {
+        display: block;
       }
 
       /* Clean input styles */
@@ -170,6 +168,108 @@
         outline: none;
         border-color: #3b82f6;
         box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      /* Mobile Optimizations */
+      @media (max-width: 768px) {
+        /* Smaller text on mobile */
+        h1 {
+          font-size: 1.125rem !important;
+        }
+
+        h2 {
+          font-size: 1.25rem !important;
+        }
+
+        h3 {
+          font-size: 1rem !important;
+        }
+
+        /* Better spacing on mobile */
+        .container {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        /* Stat cards stack nicely */
+        .stat-card {
+          margin-bottom: 1rem;
+        }
+
+        /* Make buttons full width on mobile */
+        .mobile-full-width {
+          width: 100%;
+        }
+
+        /* Better card padding on mobile */
+        .card-hover {
+          padding: 1rem !important;
+        }
+
+        /* Hide less important info on mobile */
+        .mobile-hide {
+          display: none;
+        }
+
+        /* Smaller badges on mobile */
+        .badge {
+          font-size: 0.7rem;
+          padding: 0.25rem 0.625rem;
+        }
+
+        /* Better table/grid layout on mobile */
+        .mobile-stack {
+          grid-template-columns: 1fr !important;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          padding: 0.5rem;
+        }
+
+        .hamburger span {
+          width: 24px;
+          height: 2px;
+          background-color: #374151;
+          margin: 3px 0;
+          transition: 0.3s;
+        }
+
+        /* Icon sizes */
+        .stat-blue,
+        .stat-orange,
+        .stat-indigo,
+        .stat-green {
+          padding: 0.75rem !important;
+        }
+
+        .stat-blue i,
+        .stat-orange i,
+        .stat-indigo i,
+        .stat-green i {
+          font-size: 1.25rem !important;
+        }
+
+        /* Footer adjustments */
+        footer {
+          padding: 2rem 0 !important;
+        }
+
+        footer .grid {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+        }
+      }
+
+      /* Tablet optimizations */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .container {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
       }
     </style>
   </head>
@@ -335,35 +435,35 @@
 
       <!-- Search and Filter Section - Clean -->
       <div
-        class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8"
+        class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 md:p-6 mb-8"
       >
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-          <i class="fas fa-search mr-3 text-blue-600"></i>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6 flex items-center">
+          <i class="fas fa-search mr-2 md:mr-3 text-blue-600"></i>
           Pencarian & Filter
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           <!-- Search -->
           <div class="lg:col-span-3">
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
+            <label class="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
               <i class="fas fa-search mr-2"></i>Cari Jurnal
             </label>
             <input
               type="text"
               id="searchInput"
-              placeholder="Nama jurnal, singkatan, penerbit, atau bidang ilmu..."
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              placeholder="Nama jurnal, singkatan, penerbit..."
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             />
           </div>
 
           <!-- Sinta Filter -->
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
+            <label class="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
               <i class="fas fa-medal mr-2"></i>Akreditasi SINTA
             </label>
             <select
               id="sintaFilter"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             >
               <option value="all">Semua Akreditasi</option>
               <option value="S5">S5</option>
@@ -373,12 +473,12 @@
 
           <!-- Scopus Filter -->
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
+            <label class="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
               <i class="fas fa-globe mr-2"></i>Status Scopus
             </label>
             <select
               id="scopusFilter"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             >
               <option value="all">Semua Status</option>
               <option value="indexed">Terindeks Scopus</option>
@@ -388,39 +488,39 @@
 
           <!-- Field Filter -->
           <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
+            <label class="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
               <i class="fas fa-flask mr-2"></i>Bidang Ilmu
             </label>
             <select
               id="fieldFilter"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             >
               <option value="all">Semua Bidang</option>
             </select>
           </div>
 
           <!-- Export Buttons -->
-          <div class="lg:col-span-3 flex flex-wrap gap-3 pt-4 border-t">
+          <div class="lg:col-span-3 flex flex-wrap gap-2 md:gap-3 pt-4 border-t">
             <button
               onclick="exportData('csv')"
-              class="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+              class="flex-1 md:flex-none flex items-center justify-center space-x-2 bg-green-600 text-white px-3 md:px-4 py-2 rounded-lg hover:bg-green-700 transition text-sm md:text-base"
             >
               <i class="fas fa-file-csv"></i>
-              <span>Export CSV</span>
+              <span>CSV</span>
             </button>
             <button
               onclick="exportData('json')"
-              class="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
+              class="flex-1 md:flex-none flex items-center justify-center space-x-2 bg-purple-600 text-white px-3 md:px-4 py-2 rounded-lg hover:bg-purple-700 transition text-sm md:text-base"
             >
               <i class="fas fa-file-code"></i>
-              <span>Export JSON</span>
+              <span>JSON</span>
             </button>
             <button
               onclick="resetFilters()"
-              class="flex items-center space-x-2 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition"
+              class="flex-1 md:flex-none flex items-center justify-center space-x-2 bg-gray-600 text-white px-3 md:px-4 py-2 rounded-lg hover:bg-gray-700 transition text-sm md:text-base"
             >
               <i class="fas fa-undo"></i>
-              <span>Reset Filter</span>
+              <span>Reset</span>
             </button>
           </div>
         </div>
@@ -428,20 +528,20 @@
 
       <!-- Results Info -->
       <div
-        class="bg-white rounded-lg shadow-lg p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-4"
+        class="bg-white rounded-lg shadow-lg p-3 md:p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4"
       >
-        <div class="flex items-center space-x-4">
-          <span class="text-gray-700 font-semibold">
+        <div class="flex items-center space-x-2 md:space-x-4">
+          <span class="text-sm md:text-base text-gray-700 font-semibold text-center">
             Menampilkan
             <span class="text-purple-600" id="showingCount">0</span> dari
             <span class="text-purple-600" id="totalCount">0</span> jurnal
           </span>
         </div>
         <div class="flex items-center space-x-2">
-          <label class="text-sm text-gray-700">Per Halaman:</label>
+          <label class="text-xs md:text-sm text-gray-700">Per Halaman:</label>
           <select
             id="perPageSelect"
-            class="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+            class="px-2 md:px-3 py-1 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
           >
             <option value="10">10</option>
             <option value="20" selected>20</option>
@@ -474,29 +574,29 @@
       <!-- Pagination -->
       <div
         id="pagination"
-        class="hidden bg-white rounded-lg shadow-lg p-4 mt-6"
+        class="hidden bg-white rounded-lg shadow-lg p-3 md:p-4 mt-6"
       >
         <div
-          class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
+          class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0"
         >
-          <div class="text-gray-700">
+          <div class="text-sm md:text-base text-gray-700 text-center">
             Halaman <span class="font-semibold" id="currentPage">1</span> dari
             <span class="font-semibold" id="totalPages">1</span>
           </div>
-          <div class="flex space-x-2">
+          <div class="flex space-x-2 w-full md:w-auto">
             <button
               id="prevBtn"
               onclick="previousPage()"
-              class="px-4 py-2 bg-purple-600 text-white rounded-lg transition hover:bg-purple-700"
+              class="flex-1 md:flex-none px-3 md:px-4 py-2 text-sm md:text-base bg-purple-600 text-white rounded-lg transition hover:bg-purple-700"
             >
-              <i class="fas fa-chevron-left"></i> Previous
+              <i class="fas fa-chevron-left"></i> <span class="hidden sm:inline">Previous</span><span class="sm:hidden">Prev</span>
             </button>
             <button
               id="nextBtn"
               onclick="nextPage()"
-              class="px-4 py-2 bg-purple-600 text-white rounded-lg transition hover:bg-purple-700"
+              class="flex-1 md:flex-none px-3 md:px-4 py-2 text-sm md:text-base bg-purple-600 text-white rounded-lg transition hover:bg-purple-700"
             >
-              Next <i class="fas fa-chevron-right"></i>
+              <span class="hidden sm:inline">Next</span><span class="sm:hidden">Next</span> <i class="fas fa-chevron-right"></i>
             </button>
           </div>
         </div>
@@ -504,19 +604,19 @@
     </div>
 
     <!-- Footer - Clean Design -->
-    <footer class="bg-gray-800 text-white py-12 mt-16">
+    <footer class="bg-gray-800 text-white py-8 md:py-12 mt-12 md:mt-16">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           <div>
-            <div class="flex items-center space-x-3 mb-4">
+            <div class="flex items-center space-x-3 mb-3 md:mb-4">
               <div
                 class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center"
               >
                 <i class="fas fa-book-open text-white"></i>
               </div>
-              <h3 class="text-xl font-bold">Jurnal Visualizer</h3>
+              <h3 class="text-lg md:text-xl font-bold">Jurnal Visualizer</h3>
             </div>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-400 text-xs md:text-sm">
               Platform visualisasi database jurnal ilmiah Indonesia dengan
               akreditasi SINTA S5 & S6.
             </p>
@@ -551,7 +651,7 @@
         </div>
         <div class="border-t border-gray-700 pt-8 text-center">
           <p class="text-gray-400 text-sm">
-            © 2024 Jurnal Visualizer. All rights reserved.
+            © 2025 Jurnal Visualizer. All rights reserved.
           </p>
         </div>
       </div>

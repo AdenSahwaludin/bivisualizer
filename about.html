@@ -40,6 +40,46 @@
       .feature-card:hover .icon-box {
         transform: scale(1.1);
       }
+
+      /* Mobile responsive */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.125rem !important;
+        }
+
+        h2 {
+          font-size: 1.25rem !important;
+        }
+
+        h3 {
+          font-size: 1rem !important;
+        }
+
+        .container {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        /* Better padding on mobile */
+        .hero-section {
+          padding: 2rem 1rem !important;
+        }
+
+        /* Stack cards on mobile */
+        .grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        /* Smaller icon boxes on mobile */
+        .icon-box {
+          width: 3rem !important;
+          height: 3rem !important;
+        }
+
+        .icon-box i {
+          font-size: 1.5rem !important;
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-50">
@@ -488,7 +528,7 @@
               </li>
             </ul>
             <p class="text-xs text-gray-400 mt-4">
-              © 2024 Jurnal Visualizer<br />
+              © 2025 Jurnal Visualizer<br />
               Data dari SINTA Kemdikbudristek
             </p>
           </div>
